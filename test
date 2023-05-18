@@ -1,0 +1,235 @@
+
+SAR Passenger Ticketing System. 
+B2C Business Process Document
+28 November 2022
+Doc. No
+                   :  
+Saudi Arabia Railway P.O Box 64447, Riyadh 11536
+ 
+Document Revision History
+Rev
+Description
+Name
+Role
+01
+Prepared by
+Reema AlMaiman
+IT Trainee
+02
+Reviewed by
+Alaa Bin Shaheen
+Core Business Applications Senior Analyst
+			
+Table of Contents
+1.	INTRODUCTION	4
+2.	OVERVIEW OF THE MAIN-MODULES IN B2C	4
+ 2.1 USER FLOW MODULE PROCESS	5
+2.1.1 Sign Up	5
+2.1.2 Sign in	5
+ 2.2 BOOKING FLOW MODULE PROCESS	5
+2.2.1 Create New Booking:	5
+ 2.3 MANAGE BOOKING FLOW MODULE PROCESS	5
+2.3.1 Modify the booking:	5
+2.3.2 Cancel a booking:	10
+2.3.3 Add a return trip to a booking:	11
+INTRODUCTION
+The purpose of this document is to describe in detail all the functionalities available in the Passenger Ticketing System’s B2C, which has been developed in-house. A description of the application flow and related business processes can be found within this document. This new ticketing system has been implemented in both English and Arabic.
+ 
+This document does not intend to provide implementation or technical details. It discusses only the implemented functionalities and site functionality as seen from the end-user’s perspective.
+ 
+Each section describes in detail one of the main modules available in the system.
+OVERVIEW OF THE MAIN-MODULES IN B2C 
+This section clarifies the B2C main modules, including:
+User Flow Module: 
+This module handles all functionalities related to the user account and dashboard.
+Booking Flow Module: 
+        This module handles all functionalities related to bookings.
+Manage Booking Flow Module:
+  This module handles all functionalities related to booking modification and cancellation.
+2.1 USER FLOW MODULE PROCESS
+The following is a list that clarifies all of the User Flow module's     functionalities:
+	
+  2.1.1 Sign Up
+ This functionality is used to create a new account for an end-user in the passenger ticketing system. There are two ways to create an account:
+1st Way to create an account:	
+By clicking on “Sign Up” Button shown on the right top of the ‘Home’ page:
+The system will redirect to ‘Create Account’ page, where the end-user must fill all the required details including:
+Document Type (IQAMA, GCC ID, National ID, PASSPORT).
+Document ID.
+Title.
+First Name.
+Last Name.
+Date of Birth.
+Nationality.
+Mobile Number.
+E-mail.
+After that, the end-user clicks on “Register” Button at the bottom of the page and the system will redirect to the ‘Confirmation’ page where it shows that the account has been created successfully.
+2nd Way to create an account:
+A user can create account during booking for a trip. When the user reaches the passengers details page, a “Create Account” Toggle Button at the bottom of Contact Details form will automatically create an account for the passenger (Based on the entered details) when clicks on it as shown below.
+	
+  2.1.2 Sign in
+This functionality is used by the end-user to login to his account in the passenger ticketing system.
+To do so, the user clicks on “Sign in” Button on the top of ‘Home’ page. The system will redirect the end-user to the ’Sign in’ page to enter the user ID.
+Then when user clicks on “Sign in” button, automatically the system will open ‘Verification Code’ page and directly send an OTP to the user’s mobile number and email within 1 minute. If not, after 1 minute “resend code” button will upper and the user can click on it to resend an OTP again. 
+Finally, after entering the code, system will automatically redirect the user to ‘User Profile’ page. In this page, the user will be able to see the below information:
+User’s Information: (Full name, E-mail, Phone number, and ID).
+MY Trips: In this section, the user will be able to see all his bookings listed (Upcoming, Completed, Cancelled).
+MY passengers: this part shows the user’s name and passenger type. Also, the user can add other passengers by clicking on “Add” button at the top of this section. Moreover, modifying the information of the existing passengers by clicking on the button below the passenger box.
+2.2 BOOKING FLOW MODULE PROCESS
+Functionalities under this module include:
+  2.2.1 Create New Booking:
+There are 2 ways to create new booking:
+1st Way to create new booking from Home:	
+The end-user can create a new booking directly from ‘Home’ page to either North or East stations. 
+Train Ticket Booking
+As shown below, the required information needed to be filled by the end-user for a new booking includes:
+Departure Station.
+Arrival Station.
+Outbound Date.
+Return Date ‘for a Round Trip ONLY’.
+Passenger type ‘Adult, Child, and Infant’.
+Number of passengers ‘Max 8 Passengers’.
+Promo code ‘if exist’.
+ 
+Then end-user clicks on “Select Train” button after filling these details to redirect him to ‘Select Outbound/Return Train’ page. Based on the user's search, all trains with their details will appear on this page, allowing the user to select the appropriate one.
+Train details shown in this page include:
+All trains available for the selected destination.
+Train type (Night train, Day Train, Modern Train).
+Train number.
+Departure station.
+Arrival station.
+Departure time.
+Arrival time.
+Trip duration.
+Number of stops (if any).
+Class types:
+Economy.
+Business
+Private Cabin ‘For North& Night trips ONLY’, that can be managed only from Back Office.
+Ticket price.
+In the Booking Summary in the right of the page, this information is shown:
+Number of passengers.
+Departure station.
+Arrival station.
+Date
+  
+After choosing the train/s the end-user clicks on “Continue” button and be redirected to ‘Passenger Details’ page to fill the passenger’s required details based on the passenger type:
+(Adult “>12 years”, Child “>2 years & <12 years”, Infant “< 2 years”), including:
+Document Type.
+Document Number.
+Date of Birth.
+The Infant and Child can’t travel alone without an adult.
+The Infant and Child should be traveled with an adult with age +16.
+The Carer can’t travel without Disabled.
+Title.
+First Name.
+Last Name.
+The passengers’ details can be filled either manually or automatically by clicking on Document Number text box ‘in case the user was logged in his account, then the saved passengers will be shown in the bar based on the passenger type. 
+The fare will be as follow:
+In Economy class:
+The Child fare will be discounted 50% of adult fare, and the Infant will be ZERO.
+In Business class:
+The Child fare will be discounted 20% of adult fare, and the Infant will be discounted 80% of the adult fare.
+A concession discount can be selected for either (Disabled and Cancer Patients OR Carer Ticket) that will save 50% of the adult ticket price in Economy Class ONLY.
+And the Contact Details including:
+Primary Passenger Selection.
+E-mail.
+Mobile Number.
+After filling the passenger details on the left side of the page and checking the booking summary on the right side of the page, that including:
+Number of passengers.
+Departure station.
+Arrival station.
+Date.
+Class type.
+Departure time.
+Arrival Time.
+Type of the passenger with the price of each.
+Total price.
+The end-user checks the box at the bottom of the page to confirm the entered information, then clicks on “Continue” Button which will redirect the end-user to the ‘Seat Selection’ page.
+In the ‘Seat Selection’ page, on the left side of the page the end-user can either choose the seats for all passengers or proceed to the ‘Payment Details’ page immediately without selection. and on the right side of the page a bar will be shown containing all passengers full name and their selected seats. After Clicking on “Next” at the bottom of the page, the end-user will be redirected to ‘Payment Details’ page.
+In the “Payment Details” page, the end-user can pay by either (MasterCard, Credit Card, MADA), by filling these information “Cardholder’s Name, Card Number, Expiry Month, Expiry Year, CVV” 
+By clicking on “Pay” button, a ‘Secure page’ will be shown to confirm the payment. When the user clicks on “Submit” button, the system will automatically send a booking confirmation through SMS, WhatsApp, and E-mail to the end-user. Also, the end-user will be redirected to ‘Booking Confirmation’ page where booking number and booking ticket(s) will be shown including all details such as:
+Departure station.
+Arrival station.
+Departure time.
+Arrival time.
+Train number.
+Departure date.
+Arrival date.
+Ticket price.
+Class type ‘Business/Economy/Private Cabin’.
+Number of passengers.
+Passenger(s) name.
+Payment Details ‘Payment Method and Price’.
+Additionally, the end-user can download either all tickets at once or each passenger’s ticket separately in a PDF format.
+ 
+Note* If the user book as a guest and he has a profile, the booking details will not be showing in his dashboard.
+Car Cargo Booking
+This feature is available only between Riyadh and Qurayyat stations, in two days only (RYD > QUR in Wednesday, QUR> RYD in Saturday), the user will be able to either booking for (Train Ticket ONLY, Car Cargo & Train Ticket, Car cargo ONLY), as shown below.
+  
+For Train trips only:
+As mentioned in previous.
+For Train Ticket & Car Cargo:
+After filling passengers’ information as mentioned previously, it’s proceed to ‘Car Cargo Service’ page to fill the customer details that contains:
+Sender details (Document Type, Document Number, Date of Birth, Title, First Name, Last Name, Email, Mobile Number), two toggle buttons shown in this box that enable the user to select if (Sender is also the collector and/or Sender is also the owner).
+Collector details (Document Type, Document Number, Date of Birth, Title, First Name, Last Name, Email, Mobile Number), a toggle button is shown in the box that enable the user to select if the collector is also the owner.
+Owner details (Document Type, Document Number, Date of Birth, Title, First Name, Last Name, Email, Mobile Number).
+Vehicle details (Vehicle type, Registration type, Plate Number, Manufacturer, Model, Serial Number, Color, Release year.
+After filling all the information, it will proceed to the payment page. 
+For Car Cargo only:
+After selecting the stations and the date, it will proceed to ‘Car Cargo Service’ page.
+2nd Way to create new booking from Dashboard:
+The end-user can create a new booking directly from his/her dashboard by clicking on “Book now” button, then following the same process of ‘create new booking from Home’. 
+2.3 MANAGE BOOKING FLOW MODULE PROCESS
+In the module, the end-user is able to either modify or cancel a booking from “Home” and “User’s Profile” pages. Below list describes in detail all functionalities under Manage Booking module:
+  2.3.1 Modify the booking:
+The booking can me modified in two ways.
+1st Way to modify the booking from home:
+In booking modification, the end-user can modify a one-way trip booking, rounded trip booking or add a return trip to a one-way trip booking. By clicking on “Manage Bookings” button on the right of ‘Home’ page.
+The user will be re-directed to ‘Manage Your Booking’ page where he must enter the Booking Number and Mobile Number as shown below. 
+After user clicks on “Next” button, the system will automatically open ‘Verification Code’ page and directly send an OTP to the user’s mobile number within 1 minute. If not, after 1 minute “resend code” button will appear and the user can click on it to resend an OTP again. 
+By clicking on “Next” Button, system will redirect the user to ‘Booking Details’ page where user can modify/cancel a trip, and add return trip for ‘one-way trip’. 
+When clicking on “Modify Journey” button, the modification options will appear to the user:
+Modifying Booking Class (Upgrade or Downgrade).
+Modifying Departure Station.
+Modifying Arrival Station.
+Modifying Departure Date/ Time.
+Modifying Seats.
+Delete Passengers according to their type.
+The Infant and Child can’t travel alone without an adult.
+The Infant and Child should be traveled with an adult with age +16
+The Carer can’t travel without Disabled.
+After modifying the trip and clicking on “Next” button, the user can complete the process same as the New Booking Flow module process, including penalty details. 
+If the Amount is more than the current price, for ex Upgrade, this information will be shown:
+(Current Price, New Price, Modification Fee, and Balance Amount).
+ 
+If the Amount is less than the current price, for ex Downgrade, this information will be shown:
+(Current Price, New Price, Penalty, and Refund Amount).
+The penalty will be calculated as follow:
+Up to 7 days prior to departure
+7 days to 24 hours prior to departure
+24 hours to 2 hours prior to departure
+2 hours to 1 hour prior to departure
+Less than 1 hour prior to departure
+Free
+10% of ticket price charged
+20% of ticket price charged
+50% of ticket price charged
+No changes permitted 
+(100% of ticket fee charged)
+2nd way to Manage the Booking from User’s Profile:
+In the user dashboard, the upcoming booking that can be managed (modified OR cancelled) will be shown under ‘My Trips’. The user selects the booking to me managed by clicking on “Modify Booking” button, then the user can complete the process same as the Modify booking from Home process.
+  2.3.2 Cancel a booking:
+To cancel a process, the user can go through “Modify booking” steps and click on “Cancel Journey” button on the “Booking Details” page. 
+By clicking on it, a “Cancel Journey” alert box will be shown to user including (Penalty Percentage and Refund Amount).
+The penalty is calculated as follow:
+Up to 7 days prior to departure
+7 days to 24 hours prior to departure
+Less than 24 hours prior to departure
+10% of ticket price charged
+50% of ticket price charged
+No changes permitted 
+(100% of ticket fee charged)
+After clicking on “Cancel Journey” button, system will ask the user to enter his bank details including (Card Holder Name and IBAN).
+  2.3.3 Add a return trip to a booking:
+Here user can add a return trip for a one-way trip only by clicking on “Add Return Trip” at the bottom of the page. After that the user can complete booking in same steps mentioned in Create New Booking.
